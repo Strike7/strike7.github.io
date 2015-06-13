@@ -1,20 +1,568 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0; user-scalable=0;">
 
-  {% include head.html %}
+	<title>GameForest - Online Magazine Template</title>
 
-  <body>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{site.url}}/img/favicon.ico">
 
-    {% include header.html %}
+	<!-- Core CSS -->
+    <link href="{{site.url}}/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{{site.url}}/css/style.css" rel="stylesheet" />
+    <link href="{{site.url}}/css/helpers.css" rel="stylesheet" />
+	<link href="{{site.url}}/css/themes/blue.css" rel="stylesheet" id="themes" />
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+	<!-- Plugins -->
+    <link href="{{site.url}}/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="{{site.url}}/plugins/ionicons/css/ionicons.min.css" rel="stylesheet" />
+	<link href="{{site.url}}/plugins/animate/animate.min.css" rel="stylesheet" >
+	<link href="{{site.url}}/plugins/notification/css/ns-default.css" rel="stylesheet" />
+	<link href="{{site.url}}/plugins/notification/css/ns-style-other.css" rel="stylesheet" />
+	<link href="{{site.url}}/plugins/owl-carousel/owl.carousel.css" rel="stylesheet"  />
+</head>
 
-    {% include footer.html %}
+<body class="fixed-top">
+	<!-- top -->
+	<div id="top">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="active"><i class="fa fa-home"></i></a></li>
+				<li><a href="#">PC</a></li>
+				<li><a href="#">PS4</a></li>
+				<li><a href="#">Xbox One</a></li>
+				<li><a href="#">Xbox 360</a></li>
+				<li><a href="#">PS3</a></li>
+				<li><a href="#">Wii U</a></li>
+				<li><a href="#">Vita</a></li>
+				<li><a href="#">3DS</a></li>
+				<li><a href="#">iPhone</a></li>
+				<li><a href="#">Movies</a></li>
+				<li><a href="#">Reviews</a></li>
+				<li><a href="#">Videos</a></li>
+			</ul>
+			<div class="btn-group pull-right hidden-xs">
+				<a href="#signin" data-toggle="modal" class="btn"><i class="ion-log-in"></i> Login</a>
+				<a href="#register" data-toggle="modal" class="btn"><i class="ion-person-add"></i> Create Account</a>
+			</div>
+		</div>
+	</div>
+	<!-- /.top -->
 
-  </body>
+	<!-- header -->
+	<header data-type="parallax" data-speed="4" class="cover" style="background-image: url(img/cover.jpg);">
+		<div class="header-color">
+			<div class="header">
+				<div class="container">
+					<span class="bar hide"></span>
+					<a href="index.html" class="logo pull-left"><i class="ion-flash"></i> GAMEFOREST</a>
 
+					<div class="advertisement advertisement-sm pull-left">
+						<a href="index.html"><img src="{{site.url}}/img/468.png" alt="" /></a>
+					</div>
+					<ul class="list-inline pull-right hidden-xs hidden-sm hidden-sm-lg">
+						<li><a href="#" class="btn btn-social-icon btn-circle" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#" class="btn btn-social-icon btn-circle" data-toggle="tooltip" data-placement="bottom"  title="Facebook"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#" class="btn btn-social-icon btn-circle" data-toggle="tooltip" data-placement="bottom"  title="Google"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- navigation -->
+			<nav>
+				<div class="container">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li class="dropdown mega-dropdown">
+							<a href="games.html">Games <i class="ion-arrow-down-b"></i></a>
+							<!-- mega menu -->
+							<ul class="dropdown-menu mega-dropdown-menu row">
+								<li class="col-sm-3">
+									<ul>
+										<li class="dropdown-header">Categories</li>
+										<li><a href="#"><i class="ion-ios-monitor-outline font-size-14"></i> All Platform</a></li>
+										<li><a href="#"><i class="ion-playstation font-size-14"></i> Playstation 4</a></li>
+										<li><a href="#"><i class="ion-xbox font-size-14"></i> Xbox One</a></li>
+										<li><a href="#"><i class="ion-mouse font-size-14"></i> Computer</a></li>
+									</ul>
+								</li>
+								<li class="col-sm-3">
+									<section class="padding-15 no-border no-padding-xs no-padding-sm">
+										<div class="thumb">
+											<span class="label-warning font-size-12 hidden-xs">PC</span>
+											<a href="game_post.html" class="no-padding no-border"><img src="{{site.url}}/img/menu.jpg" class="img-responsive full-width" alt="" /></a>
+										</div>
+										<h3 class="main-title margin-top-15 no-margin-xs"><a href="game_post.html">Witcher 3 the final Witcher</a></h3>
+									</section>
+								</li>
+								<li class="col-sm-3">
+									<section class="padding-15 no-border no-padding-xs no-padding-sm">
+										<div class="thumb">
+											<span class="label-primary font-size-12 hidden-xs">PS4</span>
+											<a href="game_post.html" class="no-padding no-border"><img src="{{site.url}}/img/menu.jpg" class="img-responsive full-width" alt="" /></a>
+										</div>
+										<h3 class="main-title margin-top-15 no-margin-xs"><a href="game_post.html">The Last of Us Remastered</a></h3>
+									</section>
+								</li>
+								<li class="col-sm-3">
+									<section class="padding-15 no-border no-padding-xs no-padding-sm">
+										<div class="thumb">
+											<span class="label-success font-size-12 hidden-xs">Xbox ONE</span>
+											<a href="game_post.html" class="no-padding no-border"><img src="{{site.url}}/img/menu.jpg" class="img-responsive full-width" alt="" /></a>
+										</div>
+										<h3 class="main-title margin-top-15 no-margin-xs"><a href="game_post.html">Best of Grand Theft Auto 5</a></h3>
+									</section>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">Blog <i class="ion-arrow-down-b"></i></a>
+							<!-- dropdown menu -->
+							<ul class="dropdown-menu default">
+								<li class="dropdown-submenu">
+									<a href="blog_large.html"><i class="fa fa-align-justify"></i> Blog Large</a>
+									<ul class="dropdown-menu">
+										<li><a href="blog_large.html">Archive</a></li>
+										<li><a href="blog_large_sidebar.html">Sidebar</a></li>
+										<li><a href="blog_large_post.html">Single Post</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a href="blog_medium.html"><i class="fa fa-list-ul"></i> Blog Medium</a>
+									<ul class="dropdown-menu">
+										<li><a href="blog_medium.html">Archive</a></li>
+										<li><a href="blog_medium_sidebar.html">Sidebar</a></li>
+										<li><a href="blog_medium_post.html">Single Post</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a href="blog_post_image.html"><i class="fa fa-file-o"></i> Single Post</a>
+									<ul class="dropdown-menu">
+										<li><a href="blog_post_image.html">Blog Image Post</a></li>
+										<li><a href="blog_post_slideshow.html">Blog Slideshow Post</a></li>
+										<li><a href="blog_post_video.html">Blog Video Post</a></li>
+										<li><a href="blog_post_music.html">Blog Music Post</a></li>
+									</ul>
+								</li>
+								<li class="divider"></li>
+								<li><a href="blog_masonry.html"><i class="fa fa-th-large"></i> Masonry Blog</a></li>
+								<li><a href="blog_thumbnail.html"><i class="fa fa-image"></i> Thumbnail Blog</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">Pages <i class="ion-arrow-down-b"></i></a>
+							<!-- dropdown menu -->
+							<ul class="dropdown-menu default">
+								<li><a href="page_fullwidth.html">Full Width</a></li>
+								<li><a href="games.html">Games</a></li>
+								<li><a href="game_post.html">Game Post</a></li>
+								<li><a href="page_reviews.html">Reviews</a></li>
+								<li><a href="page_review_post.html">Review Post</a></li>
+								<li><a href="page_404.html">404</a></li>
+								<li><a href="page_timeline.html">Timeline</a></li>
+								<li><a href="page_login.html">Login</a></li>
+								<li><a href="page_register.html">Register</a></li>
+								<!-- three level -->
+								<li class="dropdown-submenu">
+									<a href="#">Sidebar</a>
+									<ul class="dropdown-menu">
+										<li><a href="page_sidebar_right.html">Right</a></li>
+										<li><a href="page_sidebar_left.html">Left</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown mega-dropdown">
+							<a href="#">Features <i class="ion-arrow-down-b"></i></a>
+							<!-- mega menu -->
+							<ul class="dropdown-menu mega-dropdown-menu row">
+								<li class="col-sm-3">
+									<ul>
+										<li class="dropdown-header">Typography</li>
+										<li><a href="feature_typography.html"><i class="fa fa-sort-alpha-asc"></i> General Typography</a></li>
+										<li><a href="feature_blockquote.html"><i class="fa fa-quote-left"></i> Blockquote</a></li>
+										<li><a href="feature_helpers.html"><i class="fa fa-square-o"></i> Helper Classes</a></li>
+										<li><a href="feature_testimonials.html"><i class="fa fa-bullhorn"></i> Testimonials</a></li>
+										<li><a href="feature_grids.html"><i class="fa fa-th-large"></i> Grid Layouts</a></li>
+										<li><a href="feature_alerts.html"><i class="fa fa-bell-o"></i> Alert & Messages</a></li>
+										<li><a href="feature_labels.html"><i class="fa fa-bookmark-o"></i> Labels & Badges</a></li>
+										<li><a href="feature_media.html"><i class="fa fa-image"></i> Audio, Videos & Images</a></li>
+										<li><a href="feature_pagers.html"><i class="fa fa-ellipsis-h"></i> Pagination & Pagers</a></li>
+									</ul>
+								</li>
+								<li class="col-sm-3">
+									<ul>
+										<li class="dropdown-header">Button & Icons</li>
+										<li><a href="feature_buttons.html"><i class="fa fa-flash"></i> General Buttons</a></li>
+										<li><a href="feature_social_buttons.html"><i class="fa fa-thumbs-o-up"></i> Social Buttons</a></li>
+										<li><a href="feature_glyphicons.html"><i class="fa fa-chevron-circle-right"></i> Glyphicons</a></li>
+										<li><a href="feature_fontawesome.html"><i class="fa fa-chevron-circle-right"></i> FontAwesome icons</a></li>
+										<li><a href="feature_ionicons.html"><i class="fa fa-chevron-circle-right"></i> IonIcons</a></li>
+										<li class="dropdown-sub-header">Components</li>
+										<li><a href="feature_media_objects.html"><i class="fa fa-align-justify"></i> Media Objects</a></li>
+										<li><a href="feature_page_headers.html"><i class="fa fa-align-justify"></i> Page headers</a></li>
+										<li><a href="feature_wells.html"><i class="fa fa-align-justify"></i> Wells</a></li>
+									</ul>
+								</li>
+								<li class="col-sm-3">
+									<ul>
+										<li class="dropdown-header">Default Elements</li>
+										<li><a href="feature_widgets.html"><i class="fa fa-th"></i> General Widgets</a></li>
+										<li><a href="feature_widgets_colors.html"><i class="fa fa-th"></i> Colored Widgets</a></li>
+										<li><a href="feature_thumbnails.html"><i class="fa fa-file-o"></i> Thumbnails</a></li>
+										<li><a href="feature_tabs.html"><i class="fa fa-external-link"></i> Accordion & Tabs</a></li>
+										<li><a href="feature_timeline.html"><i class="fa fa-th-large"></i> Timeline</a></li>
+										<li><a href="feature_tables.html"><i class="fa fa-th"></i> Tables</a></li>
+										<li><a href="feature_progress.html"><i class="fa fa-arrows-h"></i> Progress Bars</a></li>
+										<li><a href="feature_panels.html"><i class="fa fa-th"></i> Panels</a></li>
+									</ul>
+								</li>
+								<li class="col-sm-3">
+									<ul>
+										<li class="dropdown-header">Forms & Info</li>
+										<li><a href="feature_forms.html"><i class="fa fa-align-justify"></i> General Forms</a></li>
+										<li><a href="feature_form_layouts.html"><i class="fa fa-align-justify"></i> Form Layouts</a></li>
+										<li><a href="feature_modals.html"><i class="fa fa-external-link"></i> Modals</a></li>
+										<li><a href="feature_carousel.html"><i class="fa fa-arrows"></i> Carousel Examples</a></li>
+										<li><a href="feature_charts.html"><i class="fa fa-bar-chart-o"></i> Charts & Countdowns</a></li>
+										<li><a href="feature_google_maps.html"><i class="fa fa-map-marker"></i> Google Maps</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="videos.html">Videos</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+					<!-- search -->
+					<div id="search" class="pull-right hidden-sm">
+						<form method="post" class="form-inline">
+							<input type="text" class="form-control" placeholder="Search..." />
+							<button type="submit" class="btn btn-primary no-shadow"><i class="ion-search"></i></button>
+						</form>
+					</div>
+				</div>
+			</nav>
+			<!-- /.navigation -->
+		</div><!-- /.header-color -->
+	</header>
+	<!-- /.header -->
+
+	<div class="container">
+		<!-- wrapper-->
+    <div id="wrapper" class="no-padding">
+      {{ content }}
+    </div><!-- /.wrapper -->
+	</div>
+
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<div class="widget row">
+				<!-- about -->
+				<div class="col-md-4 col-xs-12 no-padding-sm-lg">
+					<h4 class="title">About GameForest</h4>
+					<div class="text">
+						<span>GameForest is a perfect theme for gaming, news and entertainment websites. Built on latest Twitter Bootstrap. Template is available in 4 colors.</span>
+						<a href="http://themeforest.net/item/gameforest-online-magazine-html-template/5007730" class="btn btn-success btn-bold">Purchase <i class="fa fa-shopping-cart"></i></a>
+					</div>
+				</div>
+
+				<!-- categories -->
+				<div class="col-md-2 col-xs-12 visible-md-block visible-lg-block no-padding-sm-lg">
+					<h4 class="title">Categories</h4>
+					<ul class="nav">
+						<li><a href="#"><i class="fa fa-chevron-right"></i> Playstation 4</a></li>
+						<li><a href="#"><i class="fa fa-chevron-right"></i> XBOX ONE</a></li>
+						<li><a href="#"><i class="fa fa-chevron-right"></i> PC</a></li>
+						<li><a href="#"><i class="fa fa-chevron-right"></i> PS3</a></li>
+					</ul>
+				</div>
+
+				<!-- latest tweet -->
+				<div class="col-md-3 col-xs-12 visible-md-block visible-lg-block no-padding-sm-lg">
+					<h4 class="title">Latest Tweet</h4>
+					<script src="plugins/twitter/twitter.js"></script>
+					<div id="twitter"></div>
+				</div>
+
+				<!-- social buttons -->
+				<div class="col-md-3 col-xs-12 no-padding-sm-lg">
+					<h4 class="title">Follow Us</h4>
+					<ul class="list-inline">
+						<li><a href="#" class="btn btn-circle btn-social-icon btn-twitter" data-toggle="tooltip" title="Follow us on Twitter"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#" class="btn btn-circle btn-social-icon btn-facebook" data-toggle="tooltip" title="Follow us on Facebook"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#" class="btn btn-circle btn-social-icon btn-google-plus" data-toggle="tooltip" title="Follow us on Google"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#" class="btn btn-circle btn-social-icon btn-flickr" data-toggle="tooltip" title="Follow us on Flickr"><i class="fa fa-flickr"></i></a></li>
+						<li><a href="#" class="btn btn-circle btn-social-icon btn-github" data-toggle="tooltip" title="Follow us on Github"><i class="fa fa-github"></i></a></li>
+						<li><a href="#" class="btn btn-circle btn-social-icon btn-pinterest" data-toggle="tooltip" title="Follow us on Pinterest"><i class="fa fa-pinterest"></i></a></li>
+					</ul>
+					<h4 class="title margin-top-20">Email Newsletters</h4>
+					<p class="line-height-16 margin-bottom-15">Subscribe to our newsletter and get notification when new games are available.</p>
+					<form method="post" class="margin-top-10 btn-inline">
+						<input type="text" class="form-control form-inverse input-lg no-border no-shadow padding-right-40" placeholder="Email..." />
+						<button type="submit" class="btn btn-link color-white margin-top-5"><i class="ion-checkmark color-white"></i></button>
+					</form>
+				</div>
+			</div>
+			<!-- /.footer widget -->
+		</div>
+
+		<!-- footer bottom -->
+		<div class="footer-bottom">
+			<div class="container">
+				<ul class="pull-left">
+					<li>&copy; 2014 GAMEFOREST. All rights reserved.</li>
+				</ul>
+				<ul class="pull-right hidden-xs">
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Ad Choice</a></li>
+					<li><a href="#">Terms of Use</a></li>
+					<li><a href="#">Advertise</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.footer bottom -->
+	</footer>
+	<!-- /.footer -->
+
+	<!-- sign-in modal -->
+	<!-- Modal -->
+	<div id="signin" class="modal" tabindex="-1" role="dialog" aria-labelledby="signin-title" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title" id="signin-title"><i class="fa fa-sign-in"></i> Sign In</h4>
+		  </div>
+		  <form>
+		  <div class="modal-body modal-padding">
+			<div class="login">
+				<div class="row">
+					<div class="col-lg-12">
+						<input type="text" class="form-control input-lg" name="username" placeholder="Email address" required>
+						<span class="help-block"></span>
+						<input  type="password" class="form-control input-lg" name="password" placeholder="Password" required>
+						<div class="checkbox margin-top-20 no-margin-bottom">
+							<input type="checkbox" id="checkbox" checked="checked">
+							<label for="checkbox">Remember me</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		  </div>
+		  <div class="modal-footer bg-white no-border no-padding-top">
+			<button type="submit" class="btn btn-success pull-left"><i class="ion-log-in margin-right-5"></i> Login</button>
+			<button type="submit" class="btn btn-warning pull-right" data-dismiss="modal">close</button>
+		  </div>
+		  </form>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<!-- /.sign-in modal -->
+
+	<!-- register modal -->
+	<!-- Modal -->
+	<div id="register" class="modal" tabindex="-1" role="dialog" aria-labelledby="register-title" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title" id="register-title"><i class="ion-person-add"></i> Create Account</h4>
+		  </div>
+			<div class="padding-20">
+				<div class="alert alert-warning no-margin padding-10-15"><i class="fa fa-info"></i> All fields are required</div>
+			</div>
+			<div class="modal-body padding-left-20 padding-right-20 no-padding-top">
+				<form autocomplete="off" method="POST">
+					<div class="row">
+						<div class="control-group col-md-6 col-xs-12">
+							<label class="control-label" for="username">Username</label>
+							<div class="controls margin-top-5">
+								<input type="text" class="form-control input-lg" id="username" placeholder="Username" required>
+							</div>
+						</div>
+						<div class="control-group col-md-6 col-xs-12">
+							<label class="control-label" for="email">Email</label>
+							<div class="controls margin-top-5">
+								<input type="email" class="form-control input-lg" id="email" placeholder="Email" required>
+							</div>
+						</div>
+						<div class="control-group col-md-12 col-xs-12 margin-top-10">
+							<label class="control-label" for="password">Password</label>
+							<div class="controls margin-top-5">
+								<input type="password" class="form-control input-lg" id="password" placeholder="Password" required>
+							</div>
+						</div>
+						<div class="control-group col-md-12 col-xs-12 margin-top-10">
+							<label class="control-label" for="repeat-password">Repeat Password</label>
+							<div class="controls margin-top-5">
+								<input type="password" class="form-control input-lg" id="repeat-password" placeholder="Repeat Password" required>
+							</div>
+						</div>
+						<div class="control-group col-md-12 col-xs-12">
+							<label class="control-label margin-top-10" for="security-password">Security Answer</label>
+							<div class="controls margin-top-5">
+								<div class="row">
+									<div class="col-lg-2 no-padding-right">
+										<span class="padding-top-10 padding-left-15 font-size-14 color-grey-700 bold display-block">5 + 5 =</span>
+									</div>
+									<div class="col-lg-10 no-padding-left">
+										<input type="text" class="form-control input-lg" id="security-password" placeholder="Your Answer" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer bg-white no-border">
+				<div class="checkbox pull-left no-padding no-margin-bottom margin-top-5">
+					<input type="checkbox" id="checkbox1">
+					<label for="checkbox1">Accept terms and service.</label>
+				</div>
+			<button type="button" class="btn btn-success">Create Account</button>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<!-- /.register modal -->
+
+	<!-- Javascript -->
+    <script src="{{site.url}}/plugins/jquery/jquery-1.11.1.min.js"></script>
+    <script src="{{site.url}}/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="{{site.url}}/plugins/holder/holder.js"></script>
+	<script src="{{site.url}}/plugins/core.js"></script>
+
+	<script src="{{site.url}}/plugins/notification/js/modernizr.custom.js"></script>
+	<script src="{{site.url}}/plugins/notification/js/classie.js"></script>
+	<script src="{{site.url}}/plugins/notification/js/notificationFx.js"></script>
+
+	<script src="{{site.url}}/plugins/owl-carousel/owl.carousel.min.js"></script>
+
+	<script src="{{site.url}}/plugins/masonry/imagesloaded.pkgd.min.js"></script>
+	<script src="{{site.url}}/plugins/masonry/masonry.pkgd.min.js"></script>
+
+	<script>
+		(function($) {
+		"use strict";
+
+			/*	Carousel
+			/*----------------------------------------------------*/
+			$(".main-carousel").on("slide.bs.carousel", function() {
+				$(".carousel-caption h1 span").removeClass('animated fadeInLeft');
+				$(".carousel-caption h2 span").removeClass('animated fadeInRight');
+				$(".carousel-caption p").removeClass('animated fadeInLeft');
+			});
+			$(".main-carousel").on("slid.bs.carousel", function() {
+				$(this).find(".item.active .carousel-caption h1 span").addClass('animated fadeInLeft');
+				$(this).find(".item.active .carousel-caption h2 span").addClass('animated fadeInRight');
+				$(this).find(".item.active .carousel-caption p").addClass('animated fadeInLeft');
+			});
+
+			// create the notification
+			var bttn = document.getElementById( 'wrapper' );
+			$(document).ready(function() {
+				classie.add( bttn, 'active' );
+				setTimeout( function() {
+					classie.remove( bttn, 'active' );
+					// create the notification
+					var notification = new NotificationFx({
+						message : '<div class="ns-thumb"><img src="{{site.url}}/img/game.jpg"/></div><div class="ns-content"><p><a href="review_post.html">GTA 5</a> is now available.</p></div>',
+						layout : 'other',
+						ttl : 6000,
+						effect : 'thumbslider',
+							type : 'notice', // notice, warning, error or success
+							onClose : function() {
+								bttn.disabled = false;
+							}
+					});
+					// show the notification
+					notification.show();
+				}, 2500);
+			});
+
+			/*	Masonry
+			/*----------------------------------------------------*/
+			$('.masonry').imagesLoaded( function(){
+				$('.masonry').masonry({itemSelector: '.elem', gutter: 27 });
+			});
+
+			/* Load Content
+			/*----------------------------------------------------*/
+			$(".loaded-content section").slice(0, 4).show();
+			$('#load-more').click(function (e) {
+				e.preventDefault();
+				var btn = $(this)
+				btn.button('loading')
+				setTimeout(function () {
+					btn.button('reset')
+					$(".loaded-content section:hidden").slice(0, 4).fadeIn();
+				}, 500)
+			});
+
+			/*	Owl carousel
+			/*----------------------------------------------------*/
+			var owl = $(".owl-carousel");
+
+			owl.owlCarousel({
+			items : 4, //4 items above 1000px browser width
+			itemsDesktop : [1000,3], //3 items between 1000px and 0
+			itemsTablet: [600,1], //1 items between 600 and 0
+			itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+			});
+
+			// Custom Navigation Events
+			$(".next").click(function(){
+			owl.trigger('owl.next');
+			return false;
+			})
+			$(".prev").click(function(){
+			owl.trigger('owl.prev');
+			return false;
+			})
+			$(".play").click(function(){
+			owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
+			return false;
+			})
+			$(".stop").click(function(){
+			owl.trigger('owl.stop');
+			return false;
+			})
+
+			/*	Owl carousel
+			/*----------------------------------------------------*/
+			var owlv = $(".owl-video-carousel");
+
+			owlv.owlCarousel({
+			items : 4, //4 items above 1000px browser width
+			itemsDesktop : [1000,3], //3 items between 1000px and 0
+			itemsTablet: [600,1], //2 items between 600 and 0
+			itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+			});
+
+			// Custom Navigation Events
+			$(".video-next").click(function(){
+			owlv.trigger('owl.next');
+			return false;
+			})
+			$(".video-prev").click(function(){
+			owlv.trigger('owl.prev');
+			return false;
+			})
+
+
+			 /*	Owl carousel
+			/*----------------------------------------------------*/
+			$(".owl-widget-carousel").owlCarousel({
+				autoPlay: true,
+				singleItem:true
+			});
+		})(jQuery);
+	</script>
+</body>
 </html>
